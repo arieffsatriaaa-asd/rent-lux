@@ -1,5 +1,6 @@
 {
   "rewrites": [
-    { "source": "/components/(.*)", "destination": "/../components/$1" }
+    { "source": "/components/(.*)", "destination": "/../components/$1" },
+    { "source": "/", "destination": "/Home/index.html" }
   ]
 }
