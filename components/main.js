@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   // 1. LOAD NAVBAR
-  fetch("./website/components/navbar.html") // <-- GANTI INI
+  fetch("components/navbar.html") // <-- GANTI INI
     .then((res) => {
       if (!res.ok) throw new Error("Navbar 404"); 
       return res.text();
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch(err => console.error("Navbar gagal di load:", err));
 
   // 2. LOAD FOOTER
-  fetch("./website/components/footer.html") // <-- GANTI INI JUGA
+  fetch("components/footer.html") // <-- GANTI INI JUGA
     .then((res) => {
       if (!res.ok) throw new Error("Footer 404");
       return res.text();
