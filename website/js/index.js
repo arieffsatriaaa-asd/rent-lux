@@ -20,7 +20,7 @@
   // Cari mobil: arahkan ke halaman hasil pencarian terpisah (bukan scroll di index.html)
   function searchFleet() {
     const keyword = document.getElementById('searchCarInput').value.trim();
-    window.location.href = `../search/search.html?q=${encodeURIComponent(keyword)}`;
+    window.location.href = `/search?q=${encodeURIComponent(keyword)}`;
   }
 
   // Kirim data booking bar bawah hero langsung ke WhatsApp Admin, tapi wajib isi semua form dulu
