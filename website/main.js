@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   // 1. LOAD NAVBAR
-  fetch("../../components/navbar.html")
+  fetch("../components/navbar.html") // <-- UDAH GANTI
     .then((res) => res.text())
     .then((data) => {
       document.getElementById("navbar").innerHTML = data;
@@ -44,11 +44,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
       // ===== SELESAI HAMBURGER =====
-    });
+    })
+    .catch(err => console.error("Navbar gagal di load:", err)); // gua tambahin ini biar gampang debug
 
   // 2. LOAD FOOTER
-  fetch("../../components/footer.html")
+  fetch("../components/footer.html") // <-- UDAH GANTI
     .then((res) => res.text())
-    .then((data) => (document.getElementById("footer").innerHTML = data));
+    .then((data) => (document.getElementById("footer").innerHTML = data))
+    .catch(err => console.error("Footer gagal di load:", err));
 
 });
