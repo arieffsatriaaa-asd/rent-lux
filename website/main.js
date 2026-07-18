@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   // 1. LOAD NAVBAR
-  fetch("../../components/navbar.html") // <-- UDAH GANTI JADI 2 TITIK
+  fetch("/components/navbar.html") // <-- UDAH GANTI JADI 2 TITIK
     .then((res) => {
       if (!res.ok) throw new Error("Navbar 404"); // biar tau kalo gagal
       return res.text();
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch(err => console.error("Navbar gagal di load:", err));
 
   // 2. LOAD FOOTER
-  fetch("../../components/footer.html") // <-- UDAH GANTI JADI 2 TITIK
+  fetch("/components/footer.html") // <-- UDAH GANTI JADI 2 TITIK
     .then((res) => {
       if (!res.ok) throw new Error("Footer 404");
       return res.text();

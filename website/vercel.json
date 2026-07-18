@@ -1,5 +1,5 @@
-    {
-      "rewrites": [
-        { "source": "/", "destination": "/Home/index.html" }
-      ]
-    }
+{
+  "rewrites": [
+    { "source": "/components/(.*)", "destination": "/components/$1" }
+  ]
+}
