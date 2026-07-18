@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation - LAJU Prestige</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../globals.css">
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    
+    <div id="navbar"></div>
+
+    <main>
+  <div class="wrap page-head">
+    <h1>Data Reservasi Kendaraan</h1>
+    <p>Silakan isi detail rencana sewa Anda di bawah. Pilihan verifikasi dokumen di formulir lama sudah dihapus demi privasi kenyamanan Anda.</p>
+  </div>
+
+  <div class="wrap booking-layout">
+    <div>
+      <form id="whatsappForm">
+        <fieldset>
+          <legend>Biodata Pengguna</legend>
+          <div class="field-grid">
+            <div class="field">
+              <label for="nama">Nama Lengkap</label>
+              <input type="text" id="nama" placeholder="Sesuai kartu identitas" required>
+            </div>
+            <div class="field">
+              <label for="hp">Nomor WhatsApp Aktif</label>
+              <input type="tel" id="hp" placeholder="08xxxxxxxxxx" required>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Rincian Lokasi &amp; Pilihan Unit</legend>
+          <div class="field-grid">
+            <div class="field">
+              <label for="unit">Pilih Armada Kendaraan</label>
+              <select id="unit" required>
+                <option value="mercedes-e300" data-price="1850000" data-name="Mercedes-Benz E 300 AMG Line" data-type="Sedan Eksekutif" data-img="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=200&q=80">Mercedes-Benz E 300 AMG Line — Rp 1,85jt/hari</option>
+                <option value="bmw-530i" data-price="1750000" data-name="BMW 530i M Sport" data-type="Sporty Executive" data-img="https://images.unsplash.com/photo-1601929862217-f1bf94503333?auto=format&fit=crop&w=200&q=80">BMW 530i M Sport — Rp 1,75jt/hari</option>
+                <option value="porsche-911" data-price="3500000" data-name="Porsche 911 Carrera" data-type="Sportscar Eksklusif" data-img="https://images.unsplash.com/photo-1580679568899-be51739ba2df?auto=format&fit=crop&w=200&q=80">Porsche 911 Carrera — Rp 3,5jt/hari</option>
+                <option value="alphard" data-price="2200000" data-name="Toyota Alphard 2.5 G" data-type="VIP MPV" data-img="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=200&q=80">Toyota Alphard 2.5 G — Rp 2,2jt/hari</option>
+                <option value="audi-a6" data-price="1600000" data-name="Audi A6 45 TFSI" data-type="Premium Cruiser" data-img="https://images.unsplash.com/photo-1599912027611-484b9fc447af?auto=format&fit=crop&w=200&q=80">Audi A6 45 TFSI — Rp 1,6jt/hari</option>
+                <option value="mini-cooper" data-price="1400000" data-name="Mini Cooper S" data-type="Compact Premium" data-img="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=200&q=80">Mini Cooper S — Rp 1,4jt/hari</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="kota">Wilayah Penjemputan</label>
+              <select id="kota" required>
+                <option value="Batam">Batam</option>
+                <option value="Tanjung Pinang">Tanjung Pinang</option>
+              </select>
+            </div>
+            
+            <!-- Perbaikan Input Tanggal: Natively inputable + clickable calendar -->
+            <div class="field">
+              <label for="tglambil">Tanggal Ambil</label>
+              <input type="date" id="tglambil" required>
+            </div>
+            <div class="field">
+              <label for="tglkembali">Tanggal Kembali</label>
+              <input type="date" id="tglkembali" required>
+            </div>
+            
+            <div class="field full">
+              <label for="titik">Keterangan Titik Jemput Spesifik</label>
+              <input type="text" id="titik" placeholder="Contoh: Bandara Hang Nadim, Nama Hotel, atau Alamat Rumah">
+            </div>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:15px; border-radius: 6px; font-weight:700;">
+          Hubungi Admin &amp; Kirim Ke WhatsApp →
+        </button>
+      </form>
+    </div>
+
+    <!-- UPDATE TAMPILAN: Lembar Sewa Premium -->
+    <aside class="summary">
+      <div class="summary-ticket">
+        <div class="summary-ticket-head">
+          <h3>Estimasi Lembar Sewa</h3>
+          <span class="tag">Preview</span>
+        </div>
+        <div class="summary-car" id="summaryCar">
+          <img id="summaryImg" src="" alt="Car visual thumbnail">
+          <div>
+            <div class="name" id="summaryName">—</div>
+            <div class="type" id="summaryType">—</div>
+          </div>
+        </div>
+        <div class="summary-line"><span>Total Hari Efektif</span><b id="sumDurasi">1 hari</b></div>
+        <div class="summary-line"><span>Tarif Standar</span><b id="sumTarif">Rp 0</b></div>
+        <div class="ticket-perforation"></div>
+        <div class="summary-total">
+          <span>Estimasi Biaya</span>
+          <span class="amount" id="sumTotal">Rp 0</span>
+        </div>
+      </div>
+      <p class="summary-note">Estimasi biaya bersifat sementara, harga final akan dikonfirmasi oleh admin via WhatsApp.</p>
+    </aside>
+  </div>
+</main>
+
+    <div id="footer"></div>
+
+    <script src="../main.js"></script>
+    <script src="booking.js"></script>
+</body>
+</html>

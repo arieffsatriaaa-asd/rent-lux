@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog - LAJU Prestige</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../globals.css">
+    <link rel="stylesheet" href="catalog.css">
+</head>
+<body>
+
+    <div id="navbar"></div>
+
+    <main>
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>Our Catalog</h1>
+      <div class="hero-controls">
+        <div class="search-box">
+          <span class="search-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </span>
+          <input type="text" id="searchInput" placeholder="Cari mobil atau merek..." oninput="applyFilters()">
+          <div class="divider"></div>
+          <button type="button" aria-label="Cari dengan foto" title="Cari dengan foto (segera hadir)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          </button>
+        </div>
+
+        <nav class="breadcrumb" id="breadcrumb">
+          <a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></a>
+          <span class="sep">›</span>
+          <a href="javascript:void(0)" onclick="resetAll()">Armada</a>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="catalog-layout">
+      <!-- ================= SIDEBAR ================= -->
+      <aside class="sidebar">
+        <h3>Kategori</h3>
+        <ul class="cat-list" id="catList"></ul>
+        <a href="javascript:void(0)" class="view-all-link" onclick="resetAll()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+          Lihat Semua Unit Armada
+        </a>
+
+        <div class="brand-filter">
+          <div class="brand-filter-head">
+            <h3 style="margin:0;">Filter Merek</h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="brand-check-list" id="brandCheckList"></div>
+        </div>
+
+        <button class="clear-filters" onclick="resetAll()">Reset Semua Filter</button>
+      </aside>
+
+      <!-- ================= PRODUCT GRID ================= -->
+      <section>
+        <div class="result-bar">
+          <span class="result-count" id="resultCount"></span>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+    </div>
+  </div>
+</main>
+
+    <div id="footer"></div>
+
+    <script src="../main.js"></script>
+    <script src="catalog.js"></script>
+    
+</body>
+</html>

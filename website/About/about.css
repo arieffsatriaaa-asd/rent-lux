@@ -1,0 +1,742 @@
+/* ---------- CONTAINER & MAIN LAYOUT ---------- */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* ---------- SECTION 1: ABOUT & ADVANTAGES ---------- */
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.top-section {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 50px;
+  align-items: center;
+}
+
+
+.content-left h1,
+.company-content h2 {
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.01em;
+  font-size: clamp(32px, 4vw, 42px);
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 25px;
+  color: var(--ink);
+}
+
+.content-left p,
+.company-content p {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  margin-bottom: 17px;
+  font-weight: 400;
+}
+
+/* Action Buttons styling */
+.about-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.about-actions .btn {
+  padding: 14px 28px;
+  font-size: 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.about-actions .btn-primary {
+  background: var(--gold-bright);
+  color: #ffffff;
+  box-shadow: 0 10px 20px -5px rgba(176, 32, 43, 0.3);
+}
+
+.about-actions .btn-primary:hover {
+  background: var(--gold-dim);
+}
+
+.about-actions .btn-ghost {
+  border: 1px solid var(--line-strong);
+  color: var(--ink);
+}
+
+.about-actions .btn-ghost:hover {
+  background: var(--bg-alt);
+}
+
+/* Stunning Brand Logo Card (Revised branding with LAJU) */
+.logo-card {
+  background: radial-gradient(
+    circle at center,
+    var(--gold-dim) 0%,
+    var(--surface-dark) 100%
+  );
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  aspect-ratio: 16 / 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  box-shadow: var(--shadow);
+}
+
+.brand-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-mark-large {
+  width: 65px;
+  height: 65px;
+  border: 2px solid var(--gold-bright);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-bright);
+  font-size: 32px;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-text .title {
+  font-family: "Fraunces", serif;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--bg);
+  line-height: 1.1;
+}
+
+.brand-text .subtitle {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: var(--gold-bright);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* Bottom Grid Features */
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.feature-item {
+  padding: 35px 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.feature-item:not(:last-child) {
+  border-right: 1px solid var(--line);
+}
+
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--line-strong);
+  background-color: var(--bg-alt);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.feature-text h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.feature-text p {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+
+/* ---------- SECTION 2: PERUSAHAAN & SOCIAL BANNERS ---------- */
+.company-top {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 50px;
+}
+
+/* Image-only card replacing showroom details */
+.showroom-image-card {
+  border-radius: var(--radius);
+  aspect-ratio: 16 / 10;
+  height: 350px;
+  width: 500px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line-strong);
+  position: relative;
+}
+
+.showroom-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.showroom-image-card:hover .showroom-img {
+  transform: scale(1.05);
+}
+
+/* Custom Lists */
+.company-content ul {
+  list-style: none;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.company-content ul li {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+/* Spherical Gray Bullets */
+.company-content ul li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: var(--ink);
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 15px;
+  flex-shrink: 0;
+  box-shadow:
+    inset -1px -1px 2px rgba(0, 0, 0, 0.6),
+    0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Social Media Banners */
+.social-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+
+.social-card {
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.social-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold-bright);
+}
+
+.social-icon-box {
+  width: 38px;
+  height: 38px;
+  background-color: var(--surface-dark);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: background-color 0.25s;
+}
+
+.social-card:hover .social-icon-box {
+  background-color: var(--gold-bright);
+}
+
+.social-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.social-info .platform {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.social-info .handle {
+  font-size: 13px;
+  color: var(--ink-faint);
+}
+
+/* ---------- SECTION 3: VISI, MISI & OUR VALUE (full-bleed tabbed) ---------- */
+.vm-section {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.vm-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.vm-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 43%;
+}
+
+.vm-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(11, 11, 12, 0.55) 0%,
+    rgba(11, 11, 12, 0.78) 55%,
+    rgba(11, 11, 12, 0.95) 100%
+  );
+}
+
+.vm-inner {
+  position: relative;
+  z-index: 1;
+  padding: 90px 32px;
+}
+
+.vm-inner .eyebrow {
+  color: var(--gold-bright);
+}
+
+.vm-inner .eyebrow::before {
+  background: var(--gold-bright);
+}
+
+.vm-tabs {
+  display: flex;
+  gap: 34px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  margin: 22px 0 40px;
+}
+
+.vm-tab {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0 0 16px;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.vm-tab:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.vm-tab.active {
+  color: #ffffff;
+}
+
+.vm-tab.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--gold-bright);
+}
+
+.vm-panels {
+  position: relative;
+  min-height: 260px;
+}
+
+.vm-panel {
+  display: none;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 50px;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.vm-panel.active {
+  display: grid;
+}
+
+.vm-panel-text h3 {
+  font-family: "Fraunces", serif;
+  font-size: clamp(22px, 2.6vw, 28px);
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.vm-panel-text p {
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 540px;
+}
+
+.vm-icon-badge {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 0 1px rgba(176, 32, 43, 0.25) inset,
+    0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.vm-icon-badge i {
+  font-size: 60px;
+  color: var(--gold-bright);
+}
+
+.vm-value-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.vm-value-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 16px 18px;
+  backdrop-filter: blur(4px);
+}
+
+.vm-value-item i {
+  font-size: 17px;
+  color: var(--gold-bright);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.vm-value-item strong {
+  display: block;
+  color: #ffffff;
+  font-size: 13.5px;
+  margin-bottom: 3px;
+}
+
+.vm-value-item span {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.55;
+}
+
+/* ---------- SECTION 4: WHY CHOOSE US (editorial numbered list) ---------- */
+.why-section {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 60px;
+}
+
+.why-sticky {
+  position: sticky;
+  top: 110px;
+  align-self: start;
+}
+
+.why-sticky h2 {
+  font-family: "Fraunces", serif;
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+
+.why-sticky p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  margin-bottom: 26px;
+  max-width: 360px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.why-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px 30px;
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-bright);
+  box-shadow: 0 25px 45px -18px rgba(176, 32, 43, 0.3);
+}
+
+.why-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--gold-dim), var(--gold-bright));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 20px -6px rgba(176, 32, 43, 0.45);
+}
+
+.why-card-icon i {
+  font-size: 19px;
+  color: #ffffff;
+}
+
+.why-card h3 {
+  font-size: 16.5px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.why-card p {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+
+
+/* ---------- SECTION 5: JAMINAN LAYANAN (trust strip) ---------- */
+
+.guarantee-strip {
+  display: flex;
+  flex-wrap: wrap;
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.guarantee-item {
+  flex: 1 1 220px;
+  padding: 28px 30px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-right: 1px solid var(--line);
+}
+
+.guarantee-item:last-child {
+  border-right: none;
+}
+
+.guarantee-item i {
+  font-size: 18px;
+  color: var(--gold-bright);
+}
+
+.guarantee-item span {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+
+
+/* ---------- SECTION 6: TESTIMONIAL SPOTLIGHT ---------- */
+.quote-section {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.quote-mark {
+  font-family: "Fraunces", serif;
+  font-size: 64px;
+  color: var(--gold-soft);
+  line-height: 1;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.quote-text {
+  font-family: "Fraunces", serif;
+  font-size: clamp(20px, 2.4vw, 26px);
+  font-weight: 500;
+  font-style: normal;
+  color: var(--ink);
+  line-height: 1.5;
+  margin-bottom: 22px;
+}
+
+.quote-author {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.quote-author span {
+  display: block;
+  font-weight: 400;
+  color: var(--ink-faint);
+  text-transform: none;
+  letter-spacing: 0;
+  margin-top: 4px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- Fixed width bug fix (kartu showroom) --- */
+.showroom-image-card{ width:100% !important; }
+
+/* --- Wrap / container global --- */
+@media (max-width:1024px){
+  .wrap{ padding:0 24px; }
+}
+@media (max-width:640px){
+  .wrap{ padding:0 20px; }
+}
+@media (max-width:380px){
+  .wrap{ padding:0 16px; }
+}
+
+/* --- bottom-grid (3 fitur) & guarantee-strip --- */
+@media (max-width:768px){
+  .bottom-grid{ grid-template-columns:1fr; }
+  .feature-item:not(:last-child){
+    border-right:none !important;
+    border-bottom:1px solid var(--line);
+  }
+
+  .guarantee-item{
+    border-right:none;
+    border-bottom:1px solid var(--line);
+    flex:1 1 100%;
+  }
+  .guarantee-item:last-child{ border-bottom:none; }
+}
+
+/* --- social-grid (banner sosmed, grid 4-kolom isi .social-card) --- */
+@media (max-width:900px){
+  .social-grid:has(.social-card){ grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:600px){
+  .social-grid:has(.social-card){ grid-template-columns:1fr; }
+}
+
+/* --- Grid 2 kolom (why-grid, vm-value-grid) --- */
+@media (max-width:640px){
+  .why-grid{ grid-template-columns:1fr; }
+  .vm-value-grid{ grid-template-columns:1fr; }
+}
+
+/* --- Layout 2-panel besar (top-section, company-top, why-section, vm-panel) --- */
+@media (max-width:1024px){
+  .top-section,
+  .company-top{ grid-template-columns:1fr !important; }
+  .why-section{ grid-template-columns:1fr; }
+  .why-sticky{ position:static; }
+  .vm-panel{ grid-template-columns:1fr; }
+  .vm-icon-badge{ width:140px; height:140px; }
+  .vm-icon-badge i{ font-size:44px; }
+}
+
+@media (max-width:640px){
+  .vm-inner{ padding:56px 20px; }
+  .vm-tabs{ gap:18px; flex-wrap:wrap; }
+}
+
+/* --- Fine-tuning HP sangat kecil --- */
+@media (max-width:380px){
+  .btn{ padding:11px 18px; font-size:11px; }
+}

@@ -1,0 +1,527 @@
+/* ---------- CONTACT HERO ---------- */
+.contact-hero {
+  position: relative;
+  background: #0b0b0c;
+  color: #ffffff;
+  padding: 110px 0 100px;
+  overflow: hidden;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+.contact-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 78% center; /* fokuskan foto biar body/angle mobil ada di sisi kanan frame */
+  z-index: 1;
+}
+.contact-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(11, 11, 12, 0.96) 0%,
+    rgba(11, 11, 12, 0.82) 32%,
+    rgba(11, 11, 12, 0.35) 62%,
+    rgba(11, 11, 12, 0.6) 100%
+  );
+  z-index: 2;
+}
+.contact-hero .wrap {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 34px;
+}
+.breadcrumb a {
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.2s;
+}
+.breadcrumb a:hover {
+  color: #ffffff;
+}
+.breadcrumb span.sep {
+  width: 22px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+  display: inline-block;
+}
+.breadcrumb span.current {
+  color: var(--gold-soft);
+}
+
+.contact-hero h1 {
+  font-size: clamp(34px, 4.6vw, 54px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #ffffff;
+}
+.contact-hero h1 .soft {
+  display: block;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.38);
+}
+.contact-hero-sub {
+  max-width: 640px;
+  margin-top: 26px;
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.6);
+}
+.contact-hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 38px;
+}
+.contact-hero-actions .btn-primary {
+  background: #ffffff;
+  color: #0b0b0c;
+}
+.contact-hero-actions .btn-primary:hover {
+  background: var(--gold-soft);
+  color: #0b0b0c;
+  box-shadow: none;
+}
+
+/* ---------- REACH US ---------- */
+.reach-section {
+  padding: 90px 0;
+  background: var(--bg);
+}
+.reach-head {
+  max-width: 640px;
+  margin-bottom: 50px;
+}
+.reach-head h2 {
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 600;
+  margin-top: 12px;
+  color: var(--ink);
+}
+.reach-head p {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  margin-top: 14px;
+  line-height: 1.7;
+}
+
+.reach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.reach-card {
+  position: relative;
+  overflow: hidden;
+  padding: 38px 32px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  transition: background 0.35s ease;
+}
+.reach-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--gold-bright);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s ease;
+}
+.reach-card:hover {
+  background: var(--bg-alt);
+}
+.reach-card:hover::before {
+  transform: scaleY(1);
+}
+.reach-grid .reach-card:nth-child(3n) {
+  border-right: none;
+}
+.reach-grid .reach-card:nth-child(n + 4) {
+  border-bottom: none;
+}
+.reach-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  color: var(--gold-bright);
+  background: rgba(176, 32, 43, 0.06);
+  transition: all 0.35s ease;
+}
+.reach-icon svg {
+  width: 19px;
+  height: 19px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  transition: stroke 0.3s ease;
+}
+.reach-card:hover .reach-icon {
+  background: var(--gold-bright);
+  border-color: var(--gold-bright);
+}
+.reach-card:hover .reach-icon svg {
+  stroke: #ffffff;
+}
+.reach-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 8px;
+}
+.reach-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.reach-value a {
+  transition: color 0.2s;
+}
+.reach-value a:hover {
+  color: var(--gold-bright);
+}
+.reach-note {
+  font-size: 12.5px;
+  color: var(--ink-faint);
+}
+
+
+/* ---------- BOOKING FORM SECTION ---------- */
+.booking-section {
+  padding: 20px 0 100px;
+  background: var(--bg-alt);
+}
+.booking-inner {
+  padding-top: 90px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: start;
+}
+.booking-copy h2 {
+  font-size: clamp(28px, 3.4vw, 38px);
+  font-weight: 600;
+  margin-top: 14px;
+  line-height: 1.2;
+  color: var(--ink);
+}
+.booking-copy > p {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  margin-top: 18px;
+  line-height: 1.7;
+  max-width: 440px;
+}
+
+.booking-list {
+  margin-top: 38px;
+}
+.booking-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line-strong);
+}
+.booking-list-item:first-child {
+  padding-top: 0;
+}
+.booking-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold-bright);
+  margin-top: 7px;
+  flex-shrink: 0;
+}
+.booking-list-item p {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+.booking-list-item p strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.review-form-wrap {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 44px 40px;
+  box-shadow: 0 30px 60px -30px rgba(51, 51, 51, 0.22);
+}
+.review-form-wrap .form-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--gold-bright);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.review-form-wrap h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+.review-form-wrap .form-hint {
+  font-size: 13px;
+  color: var(--ink-faint);
+  margin-bottom: 26px;
+}
+
+.review-field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-bottom: 20px;
+}
+.review-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.review-field-grid .review-field {
+  margin-bottom: 0;
+}
+.review-field label {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--ink-faint);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.review-field label .req {
+  color: var(--gold-bright);
+}
+
+.review-field input[type="text"],
+.review-field input[type="email"],
+.review-field input[type="tel"],
+.review-field input[type="date"] {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 13.5px;
+  color: var(--ink);
+  background: var(--bg-alt);
+  transition: all 0.25s ease;
+}
+.review-field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 13.5px;
+  color: var(--ink);
+  background: var(--bg-alt);
+  transition: all 0.25s ease;
+  resize: vertical;
+  min-height: 90px;
+}
+.review-field input:focus,
+.review-field textarea:focus {
+  outline: none;
+  border-color: var(--gold-bright);
+  background: var(--surface);
+  box-shadow: 0 0 0 4px rgba(176, 32, 43, 0.09);
+}
+.review-field.field-invalid input,
+.review-field.field-invalid textarea {
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+  animation: fieldShake 0.4s ease;
+}
+.review-field.field-invalid input::placeholder,
+.review-field.field-invalid textarea::placeholder {
+  color: #ff6b6b;
+  opacity: 0.6;
+}
+@keyframes fieldShake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+.booking-warn {
+  display: none;
+  color: #ff6b6b;
+  font-size: 12px;
+  font-weight: 600;
+  margin: -6px 0 18px;
+}
+.booking-warn.show {
+  display: block;
+}
+
+.booking-submit-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 15px 24px;
+  font-size: 12.5px;
+  margin-top: 6px;
+}
+
+/* ---------- MAP SECTION ---------- */
+.map-section {
+  position: relative;
+  padding: 90px 0 100px;
+}
+.map-frame {
+  position: relative;
+  height: 440px;
+  width: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.map-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  filter: grayscale(0.35) contrast(1.05) invert(0.92) hue-rotate(180deg);
+}
+.map-card {
+  position: absolute;
+  left: 28px;
+  bottom: 28px;
+  z-index: 3;
+  background: var(--surface);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 22px 24px;
+  max-width: 300px;
+}
+.map-card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.map-card-addr {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+.map-card-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: var(--ink);
+  font-weight: 600;
+}
+.map-card-rating .stars {
+  color: #f2a93b;
+  letter-spacing: 1px;
+}
+.map-card-rating span.count {
+  color: var(--ink-faint);
+  font-weight: 500;
+}
+/* --- Wrap / container global --- */
+@media (max-width:1024px){
+  .wrap{ padding:0 24px; }
+}
+@media (max-width:640px){
+  .wrap{ padding:0 20px; }
+}
+@media (max-width:380px){
+  .wrap{ padding:0 16px; }
+}
+
+/* --- Grid reach (jangkauan area layanan) --- */
+@media (max-width:1024px){
+  .reach-grid{ grid-template-columns:repeat(2,1fr); }
+
+  /* Border kartu reach harus ikut nyesuain waktu jadi 2 kolom */
+  .reach-grid .reach-card:nth-child(3n){ border-right:1px solid var(--line); }
+  .reach-grid .reach-card:nth-child(2n){ border-right:none; }
+  .reach-grid .reach-card:nth-child(n+4){ border-bottom:1px solid var(--line); }
+  .reach-grid .reach-card:nth-child(n+5){ border-bottom:none; }
+}
+
+@media (max-width:640px){
+  .reach-grid{ grid-template-columns:1fr; }
+  .reach-grid .reach-card{ border-right:none !important; border-bottom:1px solid var(--line) !important; }
+  .reach-grid .reach-card:last-child{ border-bottom:none !important; }
+}
+
+/* --- Grid 2 kolom form --- */
+@media (max-width:640px){
+  .review-field-grid{ grid-template-columns:1fr; }
+}
+
+/* --- Layout 2-panel form + info --- */
+@media (max-width:1024px){
+  .booking-inner{ grid-template-columns:1fr; gap:44px; }
+  .review-form-wrap{ padding:40px 32px; }
+}
+
+@media (max-width:640px){
+  .review-form-wrap{ padding:28px 20px; }
+}
+
+/* --- Judul halaman (contact hero) --- */
+@media (max-width:640px){
+  .contact-hero{ min-height:auto; padding:80px 0 70px; }
+  .contact-hero-actions{ flex-direction:column; align-items:stretch; }
+  .contact-hero-actions .btn{ width:100%; justify-content:center; }
+}
+
+/* --- Peta & kontak --- */
+@media (max-width:640px){
+  .map-section{ padding:50px 0 60px; }
+  .map-frame{ height:320px; }
+  .map-card{
+    left:16px; right:16px; bottom:16px;
+    max-width:none; padding:16px 18px;
+  }
+}
+
+/* --- Fine-tuning HP sangat kecil --- */
+@media (max-width:380px){
+  .btn{ padding:11px 18px; font-size:11px; }
+  .review-form-wrap{ padding-left:16px; padding-right:16px; }
+}
+
+

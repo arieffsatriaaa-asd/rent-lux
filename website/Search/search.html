@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../globals.css">
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+    
+    <div id="navbar"></div>
+
+    <main>
+  <section class="search-hero">
+    <div class="wrap">
+      <p class="eyebrow" style="justify-content:center;">Hasil Pencarian</p>
+      <h1>Menampilkan unit untuk pencarian: <strong id="queryDisplay">-</strong></h1>
+      <p>Tidak sesuai dengan yang Anda cari? Coba kata kunci lain atau hubungi tim kami langsung via WhatsApp.</p>
+    </div>
+  </section>
+
+  <section class="result-section">
+    <div class="wrap">
+      <p class="result-count" id="resultCount"></p>
+      <div id="resultGrid"></div>
+    </div>
+
+    <div class="back-cta">
+      <a href="index.html#armada" class="btn btn-primary" style="padding:14px 36px;">Kembali ke Armada</a>
+    </div>
+  </section>
+
+  <!-- SECTION: REKOMENDASI LAIN, TEPAT SEBELUM FOOTER (mengikuti gaya mobil-detail.html) -->
+  <section class="similar-section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" style="justify-content:center;">Rekomendasi Lain</p>
+        <h2>Unit Lain yang Mungkin Anda Suka</h2>
+        <p>Beberapa pilihan populer dari armada LAJU Prestige di luar hasil pencarian Anda.</p>
+      </div>
+      <div class="fleet-grid" id="similarGrid"></div>
+    </div>
+  </section>
+</main>
+
+    <div id="footer"></div>
+
+    <script src="../main.js"></script>
+    <script src="search.js"></script>
+
+</body>
+</html>

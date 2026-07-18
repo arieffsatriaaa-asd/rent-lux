@@ -1,0 +1,407 @@
+.breadcrumb {
+  padding: 26px 0 0;
+  font-size: 12.5px;
+  color: var(--ink-faint);
+}
+.breadcrumb a {
+  color: var(--ink-soft);
+}
+.breadcrumb a:hover {
+  color: var(--gold);
+}
+
+/* DETAIL HERO & GALLERY SECTION */
+.detail-hero {
+  padding: 26px 0 60px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.gallery {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.gallery-main {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 16/10;
+  border: 1px solid var(--line);
+  background: var(--bg-alt);
+  box-shadow: var(--shadow);
+}
+.gallery-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Carousel Arrows Controls */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  z-index: 5;
+  user-select: none;
+}
+.nav-arrow:hover {
+  background: var(--ink);
+  color: white;
+}
+.nav-arrow.prev {
+  left: 20px;
+}
+.nav-arrow.next {
+  right: 20px;
+}
+
+/* 5 Multi-angle Thumbs Grid */
+.gallery-thumbs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+.gallery-thumbs button {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 0;
+  cursor: pointer;
+  aspect-ratio: 4/3;
+  background: var(--surface);
+  transition: all 0.2s ease;
+}
+.gallery-thumbs button:hover {
+  border-color: var(--line-strong);
+}
+.gallery-thumbs button.active {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px var(--gold-bright);
+}
+.gallery-thumbs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RIGHT SPEC SPECIFICATION PANEL CARD */
+.detail-side {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 36px;
+  position: sticky;
+  top: 110px;
+  max-height: calc(100vh - 140px);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+.detail-side .spec-tech-grid {
+  margin-bottom: 0;
+}
+.detail-side .price-tier-block {
+  margin-bottom: 0;
+}
+.detail-side h1 {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+/* Modern Technical Specification Data Layout (REVISI: stack label-atas / value-bawah biar rapi & konsisten) */
+.spec-tech-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 24px;
+  margin-bottom: 0;
+  border-bottom: 1px dashed var(--line-strong);
+  padding-bottom: 24px;
+}
+.spec-tech-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.spec-tech-item .spec-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-faint);
+}
+.spec-tech-item .spec-value {
+  font-size: 13.5px;
+  color: var(--ink);
+  font-weight: 600;
+  line-height: 1.4;
+}
+.spec-tech-item.highlight .spec-value {
+  color: var(--gold-bright);
+}
+
+.card-note {
+  font-size: 12px;
+  color: var(--ink-faint);
+  margin-bottom: 28px;
+  font-style: italic;
+}
+
+.price-tier-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 24px;
+}
+.price-tier-block .label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-faint);
+}
+.price-tier-block .amount {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 26px;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.detail-side .btn-reserve-instant {
+  width: 100%;
+  justify-content: center;
+  padding: 16px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+/* LOWER SECTIONS ORIGINAL LAYOUT STYLES */
+.info-section {
+  padding: 40px 0 0;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 44px;
+}
+.info-main .section-head h2 {
+  font-size: 24px;
+  margin: 8px 0 14px;
+  color: var(--ink);
+}
+.info-main .section-head p {
+  color: var(--ink-soft);
+  font-size: 14.5px;
+  line-height: 1.75;
+  margin-bottom: 36px;
+}
+.include-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+.include-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px 18px;
+  box-shadow: var(--shadow);
+}
+.include-item .ic {
+  color: var(--gold);
+  font-size: 16px;
+  font-weight: bold;
+}
+.include-item span {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.spec-table tr {
+  border-bottom: 1px solid var(--line);
+}
+.spec-table td {
+  padding: 14px 6px;
+  font-size: 13.5px;
+}
+.spec-table td:first-child {
+  color: var(--ink-faint);
+  width: 40%;
+}
+.spec-table td:last-child {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.info-side .mini-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 26px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+.info-side .mini-card h3 {
+  font-size: 15px;
+  margin-bottom: 14px;
+  color: var(--ink);
+}
+.info-side .mini-card p {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+.similar {
+  padding: 80px 0 0;
+}
+.similar .section-head h2 {
+  font-size: 24px;
+  margin: 8px 0 10px;
+}
+.similar .section-head p {
+  color: var(--ink-soft);
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+.sim-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.car-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+  display: block;
+  box-shadow: var(--shadow);
+}
+.car-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+}
+.car-card .car-img {
+  height: 170px;
+  overflow: hidden;
+  background: var(--bg-alt);
+}
+.car-card .car-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.car-body {
+  padding: 20px 22px 22px;
+}
+.car-body h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: var(--ink);
+}
+.car-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.price-block .price {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--ink);
+}
+.price-block .per {
+  font-size: 11px;
+  color: var(--ink-faint);
+}
+
+/* --- Wrap / container global --- */
+@media (max-width:1024px){
+  .wrap{ padding:0 24px; }
+}
+@media (max-width:640px){
+  .wrap{ padding:0 20px; }
+}
+@media (max-width:380px){
+  .wrap{ padding:0 16px; }
+}
+
+/* --- Grid galeri thumbnail --- */
+@media (max-width:640px){
+  .gallery-thumbs{ grid-template-columns:repeat(3,1fr); gap:8px; }
+}
+@media (max-width:380px){
+  .gallery-thumbs{ grid-template-columns:repeat(3,1fr); gap:6px; }
+}
+
+/* --- Grid 2 kolom (include-grid, spec-tech-grid) --- */
+@media (max-width:640px){
+  .include-grid{ grid-template-columns:1fr; }
+  .spec-tech-grid{ grid-template-columns:1fr; gap:12px; }
+}
+
+/* --- Grid spesifikasi simulasi (sim-grid) --- */
+@media (max-width:1024px){
+  .sim-grid{ grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:640px){
+  .sim-grid{ grid-template-columns:1fr; }
+}
+
+/* --- Layout galeri + panel harga & spesifikasi --- */
+@media (max-width:1024px){
+  .detail-hero{ grid-template-columns:1fr; gap:30px; }
+  .detail-side{ position:static; padding:28px; }
+  .info-section{ grid-template-columns:1fr; }
+  .navcta a.btn-primary{ display:none; }
+}
+
+/* --- Tombol panah galeri --- */
+@media (max-width:640px){
+  .nav-arrow{ width:36px; height:36px; font-size:14px; }
+  .nav-arrow.prev{ left:12px; }
+  .nav-arrow.next{ right:12px; }
+}
+
+/* --- Fine-tuning HP sangat kecil --- */
+@media (max-width:380px){
+  .section-head h2{ font-size:22px; }
+  .btn{ padding:11px 18px; font-size:11px; }
+}
+

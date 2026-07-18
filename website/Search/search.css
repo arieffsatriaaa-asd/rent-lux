@@ -1,0 +1,251 @@
+/* HERO RINGKAS HASIL PENCARIAN */
+.search-hero {
+  background: var(--ink);
+  color: #ffffff;
+  padding: 60px 0 50px;
+  text-align: center;
+}
+.search-hero .eyebrow {
+  justify-content: center;
+  color: var(--gold-bright);
+}
+.search-hero .eyebrow::before {
+  background: var(--gold-bright);
+}
+.search-hero h1 {
+  font-size: clamp(24px, 3.5vw, 34px);
+  font-weight: 500;
+  margin: 14px 0 8px;
+  color: #ffffff;
+}
+.search-hero h1 strong {
+  color: var(--gold-bright);
+  font-weight: 700;
+}
+.search-hero p {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 14px;
+}
+
+/* RESULT GRID (reuse gaya car-card index.html) */
+.result-section {
+  padding: 70px 0 40px;
+}
+.result-count {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-bottom: 28px;
+}
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.car-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: block;
+  box-shadow: var(--shadow);
+}
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 50px -20px rgba(51, 51, 51, 0.1);
+  border-color: var(--line-strong);
+}
+.car-card .car-img {
+  height: 190px;
+  overflow: hidden;
+  background: #f8f9fa;
+  position: relative;
+}
+.car-card .car-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  position: relative;
+  z-index: 1;
+}
+.car-card:hover .car-img img {
+  transform: scale(1.04);
+}
+.car-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  border: 1px solid var(--line);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink);
+  z-index: 3;
+  transition: transform 0.5s ease;
+  transform-origin: left top;
+}
+.car-card:hover .car-tag {
+  transform: scale(1.06);
+}
+.car-body {
+  padding: 22px;
+}
+.car-body h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: var(--ink);
+}
+.car-sub {
+  font-size: 12px;
+  color: var(--ink-faint);
+  margin-bottom: 14px;
+}
+.car-specs {
+  display: flex;
+  gap: 12px;
+  color: var(--ink-soft);
+  font-size: 12px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  background: var(--bg-alt);
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+.car-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.price-block .price {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--ink);
+}
+.price-block .per {
+  font-size: 11px;
+  color: var(--ink-faint);
+}
+.car-foot .btn {
+  padding: 8px 16px;
+  font-size: 11px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--ink-soft);
+  border: 1px dashed var(--line-strong);
+  border-radius: 12px;
+}
+.empty-state h3 {
+  color: var(--ink);
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+.empty-state p {
+  font-size: 13.5px;
+  margin-bottom: 20px;
+}
+
+/* Blok per kategori (judul armada + pilihan sekelasnya) */
+.category-block {
+  margin-bottom: 56px;
+}
+.category-block:last-child {
+  margin-bottom: 0;
+}
+.section-head {
+  max-width: 600px;
+  margin-bottom: 24px;
+}
+.section-head h2 {
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 500;
+  margin: 10px 0 8px;
+  line-height: 1.2;
+  color: var(--ink);
+}
+.section-head p {
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+/* Tombol filter kategori (mengikuti gaya fleet-tabs index.html) */
+.fleet-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.fleet-tabs button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.15s;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.fleet-tabs button.active,
+.fleet-tabs button:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+  background: var(--bg-alt);
+}
+
+/* Tombol kembali ke armada, di atas footer */
+.back-cta {
+  text-align: center;
+  padding: 50px 0 70px;
+}
+
+/* Section Rekomendasi Lain, tepat sebelum footer (mengikuti gaya mobil-detail.html) */
+.similar-section {
+  padding: 0 0 80px;
+}
+.similar-section .section-head {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: 600px;
+}
+
+@media (max-width:1024px){
+  .wrap{ padding:0 24px; }
+}
+@media (max-width:640px){
+  .wrap{ padding:0 20px; }
+}
+@media (max-width:380px){
+  .wrap{ padding:0 16px; }
+}
+
+/* --- Grid hasil pencarian mobil (fleet-grid) --- */
+@media (max-width:1024px){
+  .fleet-grid{ grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:640px){
+  .fleet-grid{ grid-template-columns:1fr; }
+}
+
+/* --- Fine-tuning HP sangat kecil --- */
+@media (max-width:380px){
+  .section-head h2{ font-size:22px; }
+  .btn{ padding:11px 18px; font-size:11px; }
+  .fleet-tabs button{ padding:7px 12px; font-size:11px; }
+}

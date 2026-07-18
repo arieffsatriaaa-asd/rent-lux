@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../globals.css">
+    <link rel="stylesheet" href="detail.css">
+</head>
+<body>
+
+    <div id="navbar"></div>
+
+
+<main>
+  <div class="wrap breadcrumb">
+    <a href="index.html">Beranda</a> / <a href="armada.html">Armada</a> / <span id="breadcrumbActive">Loading...</span>
+  </div>
+
+  <section class="detail-hero wrap">
+    <!-- LEFT MULTI-ANGLE CAROUSEL SYSTEM -->
+    <div class="gallery">
+      <div class="gallery-main">
+        <div class="nav-arrow prev" onclick="moveSlide(-1)">❮</div>
+        <div class="nav-arrow next" onclick="moveSlide(1)">❯</div>
+        <img id="mainImg" src="" alt="Main Car Image">
+      </div>
+      
+      <!-- 5 Custom Vehicle Angle Selectors -->
+      <div class="gallery-thumbs">
+        <button class="active" onclick="setSlide(0)"><img src="" alt="Tampak Depan"></button>
+        <button onclick="setSlide(1)"><img src="" alt="Tampak Belakang"></button>
+        <button onclick="setSlide(2)"><img src="" alt="Tampak Kanan"></button>
+        <button onclick="setSlide(3)"><img src="" alt="Tampak Kiri"></button>
+        <button onclick="setSlide(4)"><img src="" alt="Kabin Dalam"></button>
+      </div>
+    </div>
+
+    <!-- RIGHT PREMIUM VEHICLE TECHNICAL DATACARD -->
+    <aside class="detail-side">
+      <h1 id="carTitle">Loading Unit...</h1>
+
+      <div class="spec-tech-grid">
+        <div class="spec-tech-item highlight"><span class="spec-label">Car Type</span><span class="spec-value" id="specType">-</span></div>
+        <div class="spec-tech-item highlight"><span class="spec-label">Transmission</span><span class="spec-value" id="specTrans">-</span></div>
+
+        <div class="spec-tech-item"><span class="spec-label">Engine</span><span class="spec-value" id="specEngine">-</span></div>
+        <div class="spec-tech-item"><span class="spec-label">Power</span><span class="spec-value" id="specPower">-</span></div>
+
+        <div class="spec-tech-item"><span class="spec-label">Seats</span><span class="spec-value" id="specSeats">-</span></div>
+        <div class="spec-tech-item"><span class="spec-label">Luggage</span><span class="spec-value" id="specLuggage">-</span></div>
+
+        <div class="spec-tech-item"><span class="spec-label">Fuel</span><span class="spec-value" id="specFuel">-</span></div>
+        <div class="spec-tech-item"><span class="spec-label">Year</span><span class="spec-value" id="specYear">-</span></div>
+
+        <div class="spec-tech-item"><span class="spec-label">Color</span><span class="spec-value" id="specColor">-</span></div>
+        <div class="spec-tech-item"><span class="spec-label">Plat Nomor</span><span class="spec-value" id="specPlate">-</span></div>
+      </div>
+
+
+
+      <div class="price-tier-block">
+        <span class="label">Daily Price Rate</span>
+        <span class="amount" id="priceAmount">Rp - <small style="font-size:13px; color:var(--ink-soft); font-weight:400;">/ hari</small></span>
+      </div>
+
+      <!-- Langsung hubungkan WhatsApp biar praktis konfirmasi unitnya, bro -->
+      <a href="booking.html" id="reserveBtn" class="btn btn-primary btn-reserve-instant">Ajukan Reservasi Instan via WA</a>
+    </aside>
+  </section>
+
+  <!-- BOTTOM INFORMATION GRID -->
+  <section class="info-section wrap">
+    <div class="info-main">
+      <div class="section-head">
+        <p class="eyebrow">Tentang Unit Ini</p>
+        <h2>Elegansi Eksekutif, Siap Pakai Kapan Saja</h2>
+        <p id="aboutDescription">Loading deskripsi lengkap unit...</p>
+      </div>
+
+      <p class="eyebrow" style="margin-bottom:18px;">Termasuk dalam Sewa</p>
+      <div class="include-grid">
+        <div class="include-item"><span class="ic">✓</span><span>Asuransi proteksi standar perjalanan</span></div>
+        <div class="include-item"><span class="ic">✓</span><span>Kondisi tangki BBM penuh saat serah terima</span></div>
+        <div class="include-item"><span class="ic">✓</span><span>Layanan cuci detailing berkala bebas bau rokok</span></div>
+        <div class="include-item"><span class="ic">✓</span><span>Dukungan darurat jalan raya 24 jam</span></div>
+      </div>
+
+      <p class="eyebrow" style="margin-bottom:18px;">Spesifikasi Lengkap</p>
+      <table class="spec-table">
+        <tr><td>Spesifikasi Mesin</td><td id="tableEngine">-</td></tr>
+        <tr><td>Sistem Transmisi</td><td id="tableTrans">-</td></tr>
+        <tr><td>Kapasitas Duduk</td><td id="tableSeats">-</td></tr>
+        <tr><td>Kapasitas Ruang Bagasi</td><td id="tableLuggage">-</td></tr>
+        <tr><td>Fitur Unggulan Kabin</td><td id="tableFeatures">-</td></tr>
+        <tr><td>Syarat Ketentuan Utama</td><td>KTP & SIM A aktif / Paspor (WNA), deposit jaminan aman.</td></tr>
+      </table>
+    </div>
+
+    <div class="info-side">
+      <div class="mini-card">
+        <h3>Butuh Konsultasi Unit?</h3>
+        <p>Tim concierge LAJU Prestige siap membantu memilih unit yang paling sesuai untuk agenda bisnis, tamu VIP, maupun liburan premium Anda.</p>
+        <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:16px;">Hubungi WhatsApp CS</a>
+      </div>
+      <div class="mini-card">
+        <h3>Kebijakan Pembatalan</h3>
+        <p>Perubahan jadwal dapat dilakukan maksimal 24 jam sebelum waktu sewa tanpa dikenakan biaya administrasi hangus.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECOMMENDED RELATED VEHICLES -->
+  <section class="similar wrap">
+    <div class="section-head">
+      <p class="eyebrow">Rekomendasi Lain</p>
+      <h2>Unit Sekelas yang Mungkin Anda Suka</h2>
+    </div>
+    <div class="sim-grid">
+      <a class="car-card" href="mobil-detail.html?car=mercedes-e300">
+        <div class="car-img"><img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=600&q=80" alt="Mercedes-Benz E300"></div>
+        <div class="car-body">
+          <h3>Mercedes-Benz E 300 AMG Line</h3>
+          <div class="car-foot">
+            <div class="price-block"><span class="price">Rp 1,85jt</span><span class="per"> / hari</span></div>
+            <span class="btn btn-ghost btn-detail">Detail</span>
+          </div>
+        </div>
+      </a>
+      <a class="car-card" href="mobil-detail.html?car=bmw-530i">
+        <div class="car-img"><img src="https://images.unsplash.com/photo-1601929862217-f1bf94503333?auto=format&fit=crop&w=600&q=80" alt="BMW 530i"></div>
+        <div class="car-body">
+          <h3>BMW 530i M Sport</h3>
+          <div class="car-foot">
+            <div class="price-block"><span class="price">Rp 1,75jt</span><span class="per"> / hari</span></div>
+            <span class="btn btn-ghost btn-detail">Detail</span>
+          </div>
+        </div>
+      </a>
+      <a class="car-card" href="mobil-detail.html?car=porsche-911">
+        <div class="car-img"><img src="https://images.unsplash.com/photo-1580679568899-be51739ba2df?auto=format&fit=crop&w=600&q=80" alt="Porsche 911"></div>
+        <div class="car-body">
+          <h3>Porsche 911 Carrera</h3>
+          <div class="car-foot">
+            <div class="price-block"><span class="price">Rp 3,5jt</span><span class="per"> / hari</span></div>
+            <span class="btn btn-ghost btn-detail">Detail</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+</main>
+
+    <div id="footer"></div>
+
+    <script src="../main.js"></script>
+    <script src="detail.js"></script>
+    
+</body>
+</html>
