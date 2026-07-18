@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   // 1. LOAD NAVBAR
-  fetch("/components/navbar.html") // <-- UDAH GANTI JADI 2 TITIK
+  fetch("./website/components/navbar.html") // <-- GANTI INI
     .then((res) => {
-      if (!res.ok) throw new Error("Navbar 404"); // biar tau kalo gagal
+      if (!res.ok) throw new Error("Navbar 404"); 
       return res.text();
     })
     .then((data) => {
@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
           link.classList.add("active");
         }
       });
-      // ===== SELESAI ACTIVE =====
 
       // ===== HAMBURGER MENU =====
       const hamburgerBtn = document.getElementById("hamburgerBtn");
@@ -41,12 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
           });
         });
       }
-      // ===== SELESAI HAMBURGER =====
     })
     .catch(err => console.error("Navbar gagal di load:", err));
 
   // 2. LOAD FOOTER
-  fetch("/components/footer.html") // <-- UDAH GANTI JADI 2 TITIK
+  fetch("./website/components/footer.html") // <-- GANTI INI JUGA
     .then((res) => {
       if (!res.ok) throw new Error("Footer 404");
       return res.text();
