@@ -481,7 +481,7 @@
   document.getElementById('aboutDescription').textContent = currentCar.about;
   
   // Set Link WA CS otomatis terisi teks booking unit terkait
-  document.getElementById('reserveBtn').href = `booking.html`;
+  document.getElementById('reserveBtn').href = `/booking`;
 
   // Specs Panel
   document.getElementById('specType').textContent = currentCar.type;
